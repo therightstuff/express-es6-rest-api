@@ -31,10 +31,10 @@ npm install
 ```
 
 ### Configuration
-`config.json` is located in the configuration folder. `port`, `logLevel` and `environment` values can be overridden by environment variables `PORT`, `LOG_LEVEL` and `NODE_ENV` respectively.
+`config.js` is located in the root folder. `port`, `logLevel` and `environment` values can be overridden by environment variables `PORT`, `LOG_LEVEL` and `NODE_ENV` respectively.
 
 ### HTTPS
-If you want the server to run in https, ensure that the key and certificate files are in the same folder as `server.key` and `server.cert`
+If you want the server to run in https, ensure that the key and certificate files are in the root folder as `privkey.pem` and `cert.pem`
 
 ### Start development live-reload server
 ```

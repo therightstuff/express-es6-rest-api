@@ -1,8 +1,6 @@
 'use strict';
 
-import configLoader from './configLoader';
-
-var config = configLoader();
+import config from '../../config';
 
 /**	Creates a callback that proxies node callback style arguments to an Express Response object.
  *	@param {express.Response} res	Express HTTP Response

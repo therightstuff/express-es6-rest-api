@@ -2,7 +2,7 @@
 
 import api from './api';
 import bodyParser from 'body-parser';
-import configLoader from './lib/configLoader';
+import config from '../config';
 import cors from 'cors';
 import express from 'express';
 import http from 'http';
@@ -13,9 +13,8 @@ import { log } from './lib/util';
 import middleware from './middleware';
 import morgan from 'morgan';
 
-var config = configLoader();
-
-console.log(`server starting in ${config.environment} mode on port ${config.port}`);
+let env = config.env;
+console.log(`server starting in ${env} mode on port ${config[env].server.port}`);
 console.log(`logging level set to '${config.logLevel}'`);
 
 // self-signed certificates must be located in root directory
@@ -58,7 +57,7 @@ initializeDb({ config }, (db) => {
 	// api router
 	app.use('/api', api({ config, db }));
 
-	app.server.listen(config.port, () => {
+	app.server.listen(config[env].server.port, () => {
 		log.info(`server listening for connections`);
 	});
 });

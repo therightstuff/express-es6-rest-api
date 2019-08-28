@@ -1,4 +1,6 @@
 import fs from 'fs';
+
+import config from '../config';
 import { log } from './lib/util';
 
 // readFileSync function must use __dirname get current directory
@@ -6,14 +8,18 @@ import { log } from './lib/util';
 
 let httpsOptions = {};
 try {
-    var sourceDir = `${__dirname}/../configuration/`;
-    log.info(`loading https key and cert files from ${sourceDir}`);
+    var source = config[config.env].httpsFileLocation.replace('[[CURRENT_DIR]]', __dirname);
+    var key = `${source}privkey.pem`;
+    var cert = `${source}cert.pem`;
+    log.info(`key: ${key}`);
+    log.info(`cert: ${cert}`);
     httpsOptions = {
-        key: fs.readFileSync(`${sourceDir}server.key`, 'utf8'),
-        cert: fs.readFileSync(`${sourceDir}server.cert`, 'utf8')
-    };    
+        key: fs.readFileSync(key, 'utf8'),
+        cert: fs.readFileSync(cert, 'utf8')
+    };
 } catch (error){
-    log.debug('https key and certificate not found in directory below ' + __dirname);
+    log.info('unable to load https key and certificate');
+    log.debug(error);
 }
 
-export default httpsOptions;
+module.exports = httpsOptions;
