@@ -4,7 +4,6 @@ Express & ES6 REST API Boilerplate
 This is a modified boilerplate for building REST APIs with ES6 and Express forked from [Express & ES6 REST API Boilerplate](https://github.com/developit/express-es6-rest-api)
 
 - ES6 support via [babel](https://babeljs.io)
-- REST resources as middleware via [resource-router-middleware](https://github.com/developit/resource-router-middleware)
 - CORS support via [cors](https://github.com/troygoode/node-cors)
 - Body Parsing via [body-parser](https://github.com/expressjs/body-parser)
 
