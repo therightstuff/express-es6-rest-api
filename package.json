@@ -9,7 +9,8 @@
     "build": "./node_modules/.bin/babel src --out-dir dist",
     "start": "node dist",
     "prestart": "npm run -s build",
-    "test": "eslint src && npm run -s build && mocha && npm run clean"
+    "lint": "eslint src --ignore-pattern node_modules/",
+    "test": "npm run lint && npm run -s build && mocha && npm run clean"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -44,7 +45,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "eslint": "^6.8.0",
     "mocha": "^7.1.1",
     "nodemon": "^2.0.2",
