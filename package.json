@@ -10,7 +10,8 @@
     "start": "node dist",
     "prestart": "npm run -s build",
     "lint": "eslint src --ignore-pattern node_modules/",
-    "test": "npm run lint && npm run -s build && mocha && npm run clean"
+    "test": "npm run lint && npm run -s build && mocha && npm run clean",
+    "package-upgrade": "npx npm-check-updates -u"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -34,22 +35,22 @@
   "author": "Jason Miller <jason@developit.ca>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.13.3",
-    "compression": "^1.5.2",
-    "cors": "^2.7.1",
-    "express": "^4.13.3",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@babel/cli": "latest",
-    "@babel/core": "latest",
-    "@babel/node": "latest",
-    "@babel/polyfill": "latest",
-    "@babel/preset-env": "latest",
-    "eslint": "latest",
-    "mocha": "latest",
-    "nodemon": "latest",
-    "rimraf": "latest"
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/node": "^7.10.5",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "eslint": "^7.6.0",
+    "mocha": "^8.1.0",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2"
   },
   "homepage": "https://github.com/therightstuff/express-es6-rest-api#readme"
 }

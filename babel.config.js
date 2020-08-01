@@ -8,10 +8,10 @@ const presets = [
           chrome: "67",
           safari: "11.1",
         },
-        corejs: "2",
+        corejs: "3",
         useBuiltIns: "usage",
       },
     ],
   ];
-  
+
   module.exports = { presets };
