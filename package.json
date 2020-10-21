@@ -49,7 +49,7 @@
     "@babel/preset-env": "^7.12.1",
     "eslint": "^7.11.0",
     "mocha": "^8.2.0",
-    "nodemon": "^2.0.5",
+    "nodemon": "^2.0.6",
     "rimraf": "^3.0.2"
   },
   "homepage": "https://github.com/therightstuff/express-es6-rest-api#readme"
