@@ -42,14 +42,14 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/node": "^7.12.10",
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/node": "^7.12.13",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.12.10",
-    "eslint": "^7.15.0",
+    "@babel/preset-env": "^7.12.13",
+    "eslint": "^7.19.0",
     "mocha": "^8.2.1",
-    "nodemon": "^2.0.6",
+    "nodemon": "^2.0.7",
     "rimraf": "^3.0.2"
   },
   "homepage": "https://github.com/therightstuff/express-es6-rest-api#readme"
